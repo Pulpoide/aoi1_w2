@@ -31,30 +31,30 @@
   </div>
   <div class="centerDiv">
     <div class="formu">
-    <form action="http://localhost:8008/procesar" method="get">
+    <form action="http://localhost:8008/procesar" method="get" id="form">
       
       <h1>Nombre</h1>
       <div class="field" tabindex="1">
        
-        <input name="username" type="text" placeholder="Roberto Diaz" required minlength="3">
+        <input name="username" type="text" placeholder="Roberto Diaz" required id="name">
       </div>
 
       <h1>Email</h1>
       <div class="field" tabindex="2">
         
-        <input name="email" type="text" placeholder="Email@domain.com" required>
+        <input name="email" type="text" placeholder="Email@domain.com" required id="email">
       </div>
 
       <h1>Mensaje</h1>
       <div class="field" tabindex="3">
         
-        <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
+        <textarea name="message" placeholder="Escribe tu mensaje..." required id="message"></textarea>
       </div>
-      <button class="btnsend">Enviar</button>
+      <button class="btnsend">Enviar</input>
     </div>
       
         
-      </form>
+    </form>
     </div>
 
     </div>

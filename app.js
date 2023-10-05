@@ -1,26 +1,26 @@
 
-// Constantes
+// Constantes:
 const urlx = require('url');
 const fs = require('fs/promises');
 const path = require('path');
+const validar = require('./validar')
 
- // Función para obtener el tipo de contenido (MIME type) según la extensión del archivo
- function getMimeType(filePath) {
-    const extension = filePath.split('.').pop();
-    const mimeTypes = {
-      'html': 'text/html',
-      'css': 'text/css',
-      'jpg': 'image/jpeg',
-      'png': 'image/png',
-      'ico': 'image/x-icon',
-      'mp3': 'audio/mpeg3',
-      'mp4': 'video/mp4'
-    };
-  
-    return mimeTypes[extension];
-  }
+// Funciones:
+// Función para obtener el tipo de contenido (MIME type) según la extensión del archivo
+function getMimeType(filePath) {
+  const extension = filePath.split('.').pop();
+  const mimeTypes = {
+    'html': 'text/html',
+    'css': 'text/css',
+    'jpg': 'image/jpeg',
+    'png': 'image/png',
+    'ico': 'image/x-icon',
+    'mp3': 'audio/mpeg3',
+    'mp4': 'video/mp4'
+  };
 
-
+  return mimeTypes[extension];
+}
 
 // Función para procesar los parámetros y reemplazarlos en "registro.html".
 function procesarForm(filePath, parametros, res){
@@ -28,6 +28,8 @@ function procesarForm(filePath, parametros, res){
   const name = parametros.username;
   const email = parametros.email;
   const message = parametros.message;
+  
+  validar.validarForm(name, email, res);
 
   fs.readFile(filePath, 'utf-8')
           .then(data => {
@@ -45,7 +47,6 @@ function procesarForm(filePath, parametros, res){
               res.end('Error interno del servidor - No se pudo leer el archivo');
           });
 }
-
 
 // Función para servir un archivo
 function serveFile(filePath, response) {
@@ -85,6 +86,7 @@ module.exports = {
           // Parámetros obtenidos:
           const parametros = urlx.parse(reqURL, true).query;
 
+          
           procesarForm(filePath, parametros, res);
           
         }else if(req.method === 'GET' && reqURL === '/catalogo'){
@@ -102,15 +104,7 @@ module.exports = {
         }else{
             
             let camino = 'public' + url.pathname;
-            // Le pega al GET 
-            serveFile(camino, res);
-
-            // console.log("*---------- GET -----------*");
-            // console.log("URL = "+ url);
-            // console.log("REQUEST URL = "+ req.url);
-            // console.log("CAMINO = "+ camino);
-            // console.log("URL.PATHNAME = "+ url.pathname);
-            // console.log("*-------------------------*");        
+            serveFile(camino, res);      
         }
     }
 };
