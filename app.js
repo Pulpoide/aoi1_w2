@@ -3,6 +3,7 @@
 const urlx = require('url');
 const fs = require('fs/promises');
 const path = require('path');
+const validar = require('./validar');
 
 
  // Función para obtener el tipo de contenido (MIME type) según la extensión del archivo
@@ -22,19 +23,6 @@ const path = require('path');
   }
 
 
-// Función genérica para renderizar HTML
-function renderHTML(filePath, res){
-    fs.readFile(filePath, 'utf-8')
-                .then(data => {
-                    const contentType = getMimeType(filePath) || 'application/octet-stream';
-                    res.writeHead(200, { 'Content-Type': contentType });
-                    res.end(data);
-                })
-                .catch(err => {
-                    res.writeHead(500, { 'Content-Type': 'text/plain' });
-                    res.end('Error interno del servidor - No se pudo leer el archivo');
-                }); 
-}
 
 // Función para procesar los parámetros y reemplazarlos en "registro.html".
 function procesarForm(filePath, parametros, res){
@@ -98,7 +86,7 @@ module.exports = {
           
           // Parámetros obtenidos:
           const parametros = urlx.parse(reqURL, true).query;
-          
+
           procesarForm(filePath, parametros, res);
           
         }else if(req.method === 'GET' && reqURL === '/catalogo'){
@@ -119,114 +107,13 @@ module.exports = {
             // Le pega al GET 
             serveFile(camino, res);
 
-            console.log("*---------- GET -----------*");
-            console.log("URL = "+ url);
-            console.log("REQUEST URL = "+ req.url);
-            console.log("CAMINO = "+ camino);
-            console.log("URL.PATHNAME = "+ url.pathname);
-            console.log("*-------------------------*");        
+            // console.log("*---------- GET -----------*");
+            // console.log("URL = "+ url);
+            // console.log("REQUEST URL = "+ req.url);
+            // console.log("CAMINO = "+ camino);
+            // console.log("URL.PATHNAME = "+ url.pathname);
+            // console.log("*-------------------------*");        
         }
-
-
-        
-        
-        
-
-
-
-        // if (camino === 'public/') {
-        //     camino = 'public/index.html';   
-        // }
-
-        
-
-        
-        // Si trabajamos con parámetros:
-        // const parametros = urlx.parse(req.url, true).query;
-        // const name = parametros.user_name;
-        // const email = parametros.user_email;
-        // const message = parametros.user_message;
-
-        // fs.readFile(filePath, 'utf-8')
-        // .then(data => {
-            
-        //     const pageHTML = data
-        //     .replace('{{name}}', name)
-        //     .replace('{{email}}', email)
-        //     .replace('{{message}}', message);
-            
-        //     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-        //     res.end(pageHTML);
-        // })
-        // .catch(err => {
-        //     res.writeHead(500, { 'Content-Type': 'text/plain' });
-        //     res.end('Error interno del servidor - No se pudo leer el archivo');
-        // }); 
-        // ---------------------
-
-        
-
-       
-
-        // Como funcionaban las rutas, pero no el css.
-        if(req.method == ''){
-        var reqURL = urlx.parse(req.url).pathname;
-    
-            switch(reqURL){
-                case '/index.html':
-                    var filePath = path.join(__dirname, './index.html');
-                    renderHTML(filePath, res);
-                break;
-
-                case '/catalogo':
-                    var filePath = path.join(__dirname, 'catalogo.html');
-                    renderHTML(filePath, res);
-                break;
-
-                case '/formulario':
-                    var filePath = path.join(__dirname, 'formulario.html');
-                    renderHTML(filePath, res);
-                break;
-
-                case '/quienes':
-                    var filePath = path.join(__dirname, 'quienesomos.html');
-                    renderHTML(filePath, res);
-                break;
-
-                case '/procesar':
-                    var filePath = path.join(__dirname, 'registro.html');
-                    // Parámetros:
-                    const parametros = url.parse(req.url, true).query;
-                    const name = parametros.user_name;
-                    const email = parametros.user_email;
-                    const message = parametros.user_message;
-
-                    fs.readFile(filePath, 'utf-8')
-                    .then(data => {
-                        
-                        const pageHTML = data
-                        .replace('{{name}}', name)
-                        .replace('{{email}}', email)
-                        .replace('{{message}}', message);
-                        
-                        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-                        res.end(pageHTML);
-                    })
-                    .catch(err => {
-                        res.writeHead(500, { 'Content-Type': 'text/plain' });
-                        res.end('Error interno del servidor - No se pudo leer el archivo');
-                    }); 
-                break;
-
-                default:
-                    res.writeHead(404);
-                    res.write('Ruta no encontrada!');
-                    res.end();
-                break;
-            }
-        }
-
-
     }
 };
 
