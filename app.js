@@ -3,8 +3,6 @@
 const urlx = require('url');
 const fs = require('fs/promises');
 const path = require('path');
-const validar = require('./validar');
-
 
  // Función para obtener el tipo de contenido (MIME type) según la extensión del archivo
  function getMimeType(filePath) {
