@@ -1,6 +1,7 @@
 body{
-    background-image: url("../img/fondo6.jpg");
+    background-image: url("../img/fondo6-min.jpg");
     background-size: cover;
+    min-width: 815px;
 }
 
 .centerDiv {

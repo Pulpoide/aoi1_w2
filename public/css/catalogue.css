@@ -2,9 +2,8 @@ body{
     margin: 0;
     font-family: sans-serif;
     background-color: white;
-    background-image: url("../img/fondo7.jpg");
-    background-size: cover;
-    /* background-repeat: no-repeat; */
+    min-width: 650px;
+    background-repeat: no-repeat; 
 }
 h3{
     text-align: center;
@@ -24,6 +23,7 @@ a{
     justify-content: center;
     align-items: center;
     margin: 50px 0;
+    position: relative;
 }
 
 .content{
@@ -46,7 +46,7 @@ a{
     transform: translate(0px, -8px);
 }
 img{
-    /* width: 200px; */
+    width: 133px;
     height: 200px;
     text-align: center;
     margin: 0 auto;
@@ -54,13 +54,11 @@ img{
 }
 p{
     text-align: center;
-    /* color: aquamarine; */
     padding-top: 0 8px;
     padding-bottom: 10px;
     min-height: 80px;
     padding-left: 13px;
     padding-right: 13px;
-
 }
 h6{
     font-size: 40px;

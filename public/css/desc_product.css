@@ -1,24 +1,24 @@
 
-
-
-
 body {
     background-color: black;
-    background-image: url("../img/vela3.jpg");
+    background-image: url("../img/vela3-min.jpg");
     background-size: cover;
 }
 
 .product{
- background-color: aliceblue;
- margin-top: 150px;
- margin-left: 175px;
- margin-right: 175px;
+    background-color: aliceblue;
+    margin-top: 150px;
+    margin-left: 175px;
+    margin-right: 175px;
+    margin-bottom: 150px;
 }
 .product .row{
     display: flex;
+    justify-content: center;    
 }
 .row .col1{
-    padding-left: 24%;
+    padding-left: 5%; 
+    margin-left: auto;
     padding-top: 70px;
     
 }
@@ -38,13 +38,16 @@ body {
 h1{
     font-family: 'Cormorant Garamond', serif;
     font-size: 80px;
-    padding-left: 12.5%;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 3%;
 }
 h3{
     font-size: 50px;
-    padding-left: 25%;
+    margin-left: auto;
     padding-top: 80px;
     padding-bottom: 50px;
+    text-align: center;
 }
 
 
@@ -53,3 +56,4 @@ h3{
     align-items: center;
     justify-content: center;
 }
+
