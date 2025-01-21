@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POUI ~ ¡Muchas gracias!</title>
+    <link href="./css/styles.css" rel="stylesheet" type="text/css">
+    <link href="./css/form.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="./img/favicon.png"/>
+
+
+</head>
+
+<body class="center-body">
+    <header class="header">
+        <div class="logo"> 
+            <a href="index.html"><img src="./img/POUI.png" alt="logo de marca"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/catalogo">Catálogo</a></li>
+                <li><a href="/formulario">Contácto</a></li>
+                <li><a href="/quienesomos">¿Quiénes somos?</a></li>
+            </ul>
+        </nav>
+     </header>
+
+    <div class="bienvenida">
+    <h1> ¡Mensaje enviado!</h2>
+        <p>¡Gracias por contactarte {{name}}!</p>
+    </div>
+
+    <div class="centerDiv">
+            <div class="senddiv">
+                <img class="check" src="./img/send.png">
+            </div>
+
+        <h1 class="h1mail">From: {{email}}</h1>
+        
+        <blockquote>
+            <h1 class="h1mail">Mensaje:</h1>
+        <p>{{message}}</p>
+        </blockquote>
+        
+
+    </div>
+
+    
+</body>
+</html>

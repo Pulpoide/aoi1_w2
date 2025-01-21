@@ -9,6 +9,7 @@
 }
 
 body{
+    min-width: 950px;
     background-color: white;
     background-position-x: center;
     background-position-y: 35%; 

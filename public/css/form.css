@@ -1,102 +1,83 @@
-body{
+body {
     background-image: url("../img/fondo6-min.jpg");
     background-size: cover;
     min-width: 815px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+.bienvenida {
+    text-align: center;
+    margin-top: 20px;
+    color: #444;
 }
 
 .centerDiv {
-    height: 500px;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    border: 3px solid #000;
-    border-radius: 2%;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    gap: 15px;
     background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 80px;
 }
 
-.formu{
-    height: 100%;
-}
-
-.senddiv{
+form {
     display: flex;
-    justify-content: center;
-}
-.check{
-    margin: 12px;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.centerDiv .check{
-    margin-top: 30px;
-    margin-bottom: 25px;
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
-.centerDiv .h1mail{
-    font-size: 30px;
-    text-align: start;
-    /* margin-top: 20px; */
-    margin-bottom: 15px;
-    padding-left: 39px;
+input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.centerDiv .h1msj{
-    font-size: 30px;
-    text-align: start;
-    margin-bottom: 15px;
-    padding-left: 39px;
-
+textarea {
+    height: 100px;
+    resize: none;
 }
 
-.centerDiv p{
-    padding-left: 3%;
-    padding-right: 3%;  
-    padding-top: 9px;
-    border: 3px solid #000;
-    margin-left: 40px;
-    margin-right: 40px;
-    min-height: 202.5px;
-    max-height: 190px;
-    overflow: auto;
+button {
+    background-color: rgb(89, 55, 34);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
 }
 
- .centerDiv .formu{
+button:hover {
+    background-color: rgb(70, 40, 25);
+}
+
+
+.h1mail {
+    font-size: 20px;
+}
+
+.check {
+    width: 100px;
+    height: auto;
+}
+
+.senddiv {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-
-} 
-
-
-.field textarea{
-    width: 100%;
-    height: 150px;
-    padding-left: 9px;
-    max-width: 494px;
-    max-height: 161px;
-    min-width: 494px;
-    min-height: 105px;
-    
 }
-
-.field input{
-    width: 100%;
-    padding-left: 9px;
-}
-
-.formu form {
-    width: 493px;
-    height: 374px;
-}
-
-button{
-    display: block;
-    padding: 0.5rem 1rem;
-    width: 200px;
-    margin: 0 auto;
-    margin-top: 50px;
-    color: whitesmoke;
-    background-color: rgb(89, 55, 34);;
-}
-

@@ -1,60 +1,122 @@
-
+/* General Styles */
 body {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
     background-color: black;
     background-image: url("../img/vela3-min.jpg");
     background-size: cover;
+    background-position: center;
+    color: #333;
 }
 
-.product{
-    margin-top: 150px;
-    margin-left: 175px;
-    margin-right: 175px;
-    margin-bottom: 150px;
-}
-.product .row{
+/* Header */
+.header {
     display: flex;
-    justify-content: center;    
-    border-radius: 50px;
-    background-color: white;
-}
-.row .col1{
-    padding-left: 5%; 
-    margin-left: auto;
-    padding-top: 70px;
-    
-}
-.row .col2{
-    margin-left: auto;
-    margin-right: 150px;
-}
-.product img{
-    width: 500px;
-    height: 600px;
-    margin-left: 70px;
-    margin-top: 70px;
-    margin-bottom: 70px;    
-}
-
-
-h1{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 80px;
-    margin-left: auto;
-    text-align: center;
-    padding-bottom: 3%;
-}
-h3{
-    font-size: 50px;
-    margin-left: auto;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-
-
-.btncomprar{
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 0;
 }
 
+.logo img {
+    max-height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Product Section */
+.product {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.product .content {
+    display: flex;
+    flex-wrap: wrap; /* Hace el diseño responsivo */
+    align-items: center;
+    padding: 20px;
+}
+
+.text {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.text h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.text .btncat {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.text .btncat:hover {
+    background-color: #555;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .text {
+        padding: 10px;
+    }
+
+    .text h1 {
+        font-size: 2rem;
+    }
+
+    .text h3 {
+        font-size: 1.5rem;
+    }
+}
