@@ -42,8 +42,7 @@ project-root/
 │   ├── desc_product.html
 │   ├── mensaje-enviado.html
 │   ├── css/            
-│   ├── img/            
-│   └── js/            
+│   └── img/                        
 ```
 
 ---
@@ -51,7 +50,7 @@ project-root/
 ## Instalación y Uso
 
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/Pulpoide/aoi1_w2.git
    cd
    npm install
    node server.js
