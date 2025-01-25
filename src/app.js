@@ -2,7 +2,7 @@
 const urlx = require('url');
 const fs = require('fs').promises;
 const path = require('path');
-const validar = require('./validar')
+const validar = require('../public/js/validar')
 
 // Funciones:
 function getMimeType(filePath) {

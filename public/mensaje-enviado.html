@@ -5,43 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POUI ~ ¡Muchas gracias!</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+
     <link href="./css/styles.css" rel="stylesheet" type="text/css">
     <link href="./css/navbar.css" rel="stylesheet" type="text/css">
     <link href="./css/thankyou.css" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/png" href="./img/favicon.png" />
-
-
 </head>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
-
-        document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
-    });
-</script>
-
 <body class="center-body">
-    <header class="header">
-        <div class="headerDiv">
-            <div class="logo">
-                <a href="index.html"><img src="./img/POUI.png" alt="logo de marca"></a>
-            </div>
-
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/catalogo">Catálogo</a></li>
-                    <li><a href="/formulario">Contácto</a></li>
-                    <li><a href="/quienesomos">¿Quiénes somos?</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <div class="bienvenida">
         <h1> ¡Mensaje enviado!</h1>
         <p class="thankyou-text">¡Gracias por contactarte {{name}}!</p>
@@ -64,6 +35,8 @@
         </div>
 
     </div>
+
+    <script src="./js/navbar.js"></script>
 </body>
 
 </html>
