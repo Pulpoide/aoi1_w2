@@ -1,0 +1,84 @@
+.center-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    background-image: url("../img/fondo6-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.centerDiv {
+    justify-items: center;
+}
+
+.senddiv {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.check {
+    filter: invert(1) brightness(2);
+    width: 120px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+blockquote {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 5px solid #c45a1d;
+    padding: 30px;
+    border-radius: 8px;
+    font-style: italic;
+    position: relative;
+    backdrop-filter: blur(5px);
+    max-width: fit-content;
+}
+
+blockquote p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.h1mail {
+    color: #fff !important;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    blockquote {
+        margin: 20px;
+        padding: 20px;
+
+    }
+
+    .check {
+        width: 100px;
+    }
+}

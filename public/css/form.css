@@ -1,83 +1,122 @@
 body {
     background-image: url("../img/fondo6-min.jpg");
     background-size: cover;
-    min-width: 815px;
-    font-family: Arial, sans-serif;
-    color: #333;
+    background-position: center;
+    background-attachment: fixed;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .bienvenida {
-    text-align: center;
-    margin-top: 20px;
-    color: #444;
+    position: relative;
+    z-index: 2;
+    margin-top: 100px !important;
 }
 
 .centerDiv {
     display: flex;
     flex-direction: column;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 30px;
     border-radius: 8px;
-    gap: 15px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     max-width: 500px;
-    margin-top: 80px;
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
+    width: 100%;
 }
 
 label {
-    font-size: 1rem;
-    margin-bottom: 5px;
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
 }
 
-input, textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+input,
+textarea {
     width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #c45a1d;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
     box-sizing: border-box;
 }
 
-textarea {
-    height: 100px;
-    resize: none;
-}
-
-button {
-    background-color: rgb(89, 55, 34);
+button.btnsend {
+    align-self: center;
+    width: 200px;
+    padding: 15px;
+    background-color: #c45a1d;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
     border-radius: 4px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
     cursor: pointer;
-    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 15px;
 }
 
-button:hover {
-    background-color: rgb(70, 40, 25);
+@media (max-width: 768px) {
+    .centerDiv {
+        margin: 20px;
+        padding: 25px;
+        margin-top: 20px;
+    }
+
+    .bienvenida {
+        margin-top: 85px;
+    }
+
+    form {
+        gap: 20px;
+    }
 }
 
+@media (max-width: 480px) {
+    .centerDiv {
+        margin: 15px;
+        padding: 20px;
+    }
 
-.h1mail {
-    font-size: 20px;
-}
+    button.btnsend {
+        width: 100%;
+        padding: 12px;
+    }
 
-.check {
-    width: 100px;
-    height: auto;
-}
-
-.senddiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    input,
+    textarea {
+        padding: 10px;
+    }
 }

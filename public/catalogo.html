@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POUI ~ Catálogo</title>
     <link href="./css/styles.css" rel="stylesheet" type="text/css">
+    <link href="./css/navbar.css" rel="stylesheet" type="text/css">
     <link href="./css/catalogue.css" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/png" href="./img/favicon.png"/>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
 
 </head>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
+    });
+</script>
+
 <body>
     <header class="header">
-        <div class="logo"> 
-            <a href="index.html"><img src="./img/POUI.png" alt="logo de marca"></a>
+        <div class="headerDiv">
+            <div class="logo">
+                <a href="index.html"><img src="./img/POUI.png" alt="logo de marca"></a>
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/catalogo">Catálogo</a></li>
+                    <li><a href="/formulario">Contácto</a></li>
+                    <li><a href="/quienesomos">¿Quiénes somos?</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="/catalogo">Catálogo</a></li>
-                <li><a href="/formulario">Contácto</a></li>
-                <li><a href="/quienesomos">¿Quiénes somos?</a></li>
-            </ul>
-        </nav>
-     </header>
-    
+    </header>
+
     <video src="./video/video2.mp4" autoplay loop playsinline muted>
     </video>
 
     <div class="bienvenida">
-        <h1 class="titulo"> Catálogo </h1>
+        <h1> Catálogo </h1>
         <p>Encontrá lo que buscas en nuestro catálogo.</p>
     </div>
-    
+
     <div class="galeria">
 
-        <div class="content" >
+        <div class="content">
             <img src="./img/velacolibri-min.jpg">
             <h3>Vela Colibrí</h3>
-            <p>Velas Trochilidae energéticas.</p>
+            <p>Velas Trochilidae energéticas, ideales para renovar energias.</p>
             <h6>U$D 15.00.-</h6>
             <a href="/desc_product">
                 <button class="compra-1">Comprar ahora</button>
             </a>
-            
-            </div>
-   
-   
-   
-        <div class="content" >
-        <img src="./img/difusor1-min.jpg">
-        <h3>Difusor</h3>
-        <p>Increible difusor, un humito increible.</p>
-        <h6>U$D 40.00.-</h6>
-        <button class="compra-2">Comprar ahora</button>
-        </div>
 
-        
-        <div class="content" >
-        <img src="./img/vela3-min.jpg">
-        <h3>Vela Valhalla</h3>
-        <p>La mejor vela que podrias tener en tu vida, es una decisión.</p>
-        <h6>U$D 50.00.-</h6>
-        <button class="compra-3">Comprar ahora</button>
         </div>
 
 
 
-        <div class="content" >
+        <div class="content">
+            <img src="./img/difusor1-min.jpg">
+            <h3>Difusor</h3>
+            <p>Increible difusor, un humito increible.</p>
+            <h6>U$D 40.00.-</h6>
+            <button class="compra-2">Comprar ahora</button>
+        </div>
+
+
+        <div class="content">
+            <img src="./img/vela3-min.jpg">
+            <h3>Vela Valhalla</h3>
+            <p>La mejor vela que podrias tener en tu vida, es una decisión.</p>
+            <h6>U$D 50.00.-</h6>
+            <button class="compra-3">Comprar ahora</button>
+        </div>
+
+
+
+        <div class="content">
             <img src="./img/vela4-min.jpg">
             <h3>Set de Velas x3</h3>
             <p>Combaso de velas aromáticas riquisimas.</p>
-            <h6>U$D 35.00.-</h6>         
+            <h6>U$D 35.00.-</h6>
             <button class="compra-4">Comprar ahora</button>
-            </div>
-    
+        </div>
+
     </div>
-    
+
 </body>
+
 </html>

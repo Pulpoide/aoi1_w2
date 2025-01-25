@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POUI ~ Contacto</title>
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <link href="./css/styles.css" rel="stylesheet" type="text/css">
+    <link href="./css/navbar.css" rel="stylesheet" type="text/css">
     <link href="./css/form.css" rel="stylesheet" type="text/css">
 </head>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
+    });
+</script>
+
 <body>
     <header class="header">
-        <div class="logo"> 
-            <a href="index.html"><img src="./img/POUI.png" alt="logo de marca"></a>
+        <div class="headerDiv">
+            <div class="logo">
+                <a href="index.html"><img src="./img/POUI.png" alt="logo de marca"></a>
+            </div>
+
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/catalogo">Catálogo</a></li>
+                    <li><a href="/formulario">Contácto</a></li>
+                    <li><a href="/quienesomos">¿Quiénes somos?</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="/catalogo">Catálogo</a></li>
-                <li><a href="/formulario">Contácto</a></li>
-                <li><a href="/quienesomos">¿Quiénes somos?</a></li>
-            </ul>
-        </nav>
-     </header>
+    </header>
 
     <div class="bienvenida">
         <h1>Formulario</h1>
@@ -44,4 +61,5 @@
     </div>
 
 </body>
+
 </html>

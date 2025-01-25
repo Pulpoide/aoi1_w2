@@ -31,9 +31,9 @@ Esta página web fue diseñada como la base de un proyecto para una emprendedora
 ```bash
 project-root/
 ├── server.js 
-├── src/js/
-        ├── app.js
-        └── validar.js                
+├── src/
+    ├── app.js
+    └── validar.js                
 ├── public/             
 │   ├── index.html      
 │   ├── catalogo.html   

@@ -29,8 +29,6 @@ async function procesarForm(filePath, parametros, res) {
     console.log(mensajeError);
 
   } else {
-
-    console.log("Intentando leer archivo en:", filePath)
     try {
       let data = await fs.readFile(filePath, 'utf-8');
 
@@ -38,10 +36,10 @@ async function procesarForm(filePath, parametros, res) {
         .replace('{{name}}', username || 'Usuario desconocido')
         .replace('{{email}}', email || 'Email no proporcionado')
         .replace('{{message}}', message || 'Sin mensaje');
-  
+
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       res.end(pageHTML);
-      
+
     } catch (err) {
       res.writeHead(500, { 'Content-Type': 'text/plain' });
       res.end('Error interno del servidor - No se pudo leer el archivo');
@@ -78,13 +76,10 @@ module.exports = {
       var url = new URL('http://localhost:8008' + reqURL);
 
       if (reqURL.includes('/procesar')) {
-        //var filePath = path.join(__dirname, 'public','mensaje-enviado.html');
-        const filePath = path.join(__dirname, '..', '..', 'public', 'mensaje-enviado.html');
+        const filePath = path.join(__dirname, '..', 'public', 'mensaje-enviado.html');
         const parametros = urlx.parse(reqURL, true).query;
-        console.log("Parámetros:", parametros);
 
         procesarForm(filePath, parametros, res);
-
       } else if (req.method === 'GET') {
 
         let camino;

@@ -1,7 +1,7 @@
 module.exports = {
   validarForm(username, email, message) {
     const errores = [];
-    
+
     if (!username || username.length < 3) {
       errores.push("El nombre debe tener al menos 3 caracteres.");
     }

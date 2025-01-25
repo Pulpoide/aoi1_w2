@@ -1,166 +1,187 @@
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Cormorant+Garamond:wght@300&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-body{
-    min-width: 950px;
+body {
     background-color: white;
     background-position-x: center;
-    background-position-y: 35%; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: auto;
+    overflow-y: overlay;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: auto;
 }
 
 video {
     object-fit: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: fixed;
-    top: 85px;
+    top: 0;
     left: 0;
-  }
+    z-index: -1;
+}
 
-.header{
+.header {
     background-color: rgb(251, 251, 251);
     display: flex;
-    justify-content: flex-end;
+    justify-content: start;
     align-items: center;
     height: 85px;
     padding: 5px 10%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.header .logo{
+.headerDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
     cursor: pointer;
     margin-right: auto;
 }
 
-.header .logo img{
+.header .logo img {
     height: 70px;
     width: auto;
     transition: all 0.3s;
 }
 
-.header .logo img:hover{
+.header .logo img:hover {
     transform: scale(1.2);
 }
 
-.header .nav-links{
+.header .nav-links {
     list-style: none;
 }
 
 
-.header .nav-links li{
+.header .nav-links li {
     display: inline-block;
     padding: 0 20px;
 }
 
-.header .nav-links li:hover{
+.header .nav-links li:hover {
     transform: scale(1.1);
 }
 
-.header .nav-links a{
+.header .nav-links a {
     color: black;
     text-decoration: none;
 }
 
-.header .nav-links li a:hover{
+.header .nav-links li a:hover {
     color: coral;
 }
-.separ{
+
+.separ {
     padding-top: 5%;
 }
 
 
-.bienvenida{
-    position: relative;
-    height: 150px;
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top:4%;
+    box-sizing: border-box;
+    margin-top: 100px;
+    padding: 20px;
 }
 
-.bienvenida h1{
-    font-size: 90px;
+.bienvenida h1 {
     font-family: 'Cormorant Garamond', serif;
-    text-align: center;
-    margin-bottom: 20px;
-    color: rgb(251, 251, 251);
+    font-size: 2.5rem;
+    color: white !important;
     text-shadow: -1.5px 1.5px 0 #000,
-                          1.5px 1.5px 0 #000,
-                         1.5px -1.5px 0 #000,
-                        -1.5px -1.5px 0 #000;
-    
+        1.5px 1.5px 0 #000,
+        1.5px -1.5px 0 #000,
+        -1.5px -1.5px 0 #000;
+    margin-bottom: 15px;
 }
 
-.bienvenida p{
-    font-size: x-large;
-    text-align: center;
+.bienvenida p {
+    font-size: 1.2rem;
     color: white;
     text-shadow: -1px 1px 0 #000,
-                          1px 1px 0 #000,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    max-width: 600px;
+    line-height: 1.5;
 }
 
-
-.btnCatalogo{
+.btnCatalogo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
 }
 
-.btncat{
+.btncat {
     width: 300px;
     height: 90px;
     background-color: rgb(89, 55, 34);
 
     font-family: 'Aladin', cursive;
     font-size: 25px;
-  
+
     letter-spacing: 2px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
     border: 3px solid #000;
     padding: 0.25em 0.5em;
-    box-shadow: 1px 1px 0px 0px #231305, 
-                2px 2px 0px 0px #231305, 
-                3px 3px 0px 0px #231305, 
-                4px 4px 0px 0px #231305,
-                5px 5px 0px 0px #231305;
-                
+    box-shadow: 1px 1px 0px 0px #231305,
+        2px 2px 0px 0px #231305,
+        3px 3px 0px 0px #231305,
+        4px 4px 0px 0px #231305,
+        5px 5px 0px 0px #231305;
+
     position: relative;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     border-radius: 2%;
     text-shadow: -1px 1px 0 #000,
-                            1px 1px 0 #000,
-                            1px -1px 0 #000,
-                            1px -1px 0 #000;
-                            
-    
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        1px -1px 0 #000;
+
+
 }
 
- button:active {
+button:active {
     box-shadow: 0px 0px 0px 0px;
     top: 5px;
     left: 5px;
-  } 
+}
 
-  
-  .quienessomos{
-    display: flex;
-    justify-content: center;
-    padding-left: 300px;
-    padding-right: 300px;
-  }
-  .body-quienes-somos{
-    background-image: url("../img/vela4-min.jpg");
-    background-size: cover;
+.thankyou-text {
+    font-size: 1.3rem;
+    color: #fff;
+    text-shadow: -1px 1px 0 #000,
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
 }
