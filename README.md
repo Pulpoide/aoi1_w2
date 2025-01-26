@@ -1,4 +1,4 @@
-# POUI
+# [POUI](https://poui.netlify.app/)
 
 ## Descripción
 Esta página web fue diseñada como la base de un proyecto para una emprendedora dedicada a la venta de velas aromáticas, difusores y otros productos relacionados con la aromaterapia y el bienestar. El sitio ofrece una experiencia cálida y elegante que refleja la esencia del negocio, con un diseño centrado en destacar la calidad artesanal y los beneficios de los productos.
@@ -41,7 +41,9 @@ project-root/
 │   ├── quienesomos.html 
 │   ├── desc_product.html
 │   ├── mensaje-enviado.html
-│   ├── css/            
+│   ├── css/    
+│   ├── js/    
+│   ├── video/    
 │   └── img/                        
 ```
 
@@ -55,18 +57,6 @@ project-root/
    npm install
    node server.js
    ```
-
----
-
-## Uso
-
-- **Inicio:** Visita `http://localhost:8008/` para ver la página principal.
-- **Rutas Disponibles:**
-  - ``: Muestra el catálogo de productos.
-  - `/formulario`: Formulario de contacto.
-  - `/quienesomos`: Información sobre la organización.
-  - `/desc_product`: Detalles de productos.
-  - `/procesar`: Procesa los datos enviados desde el formulario.
 
 ---
 
