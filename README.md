@@ -62,7 +62,7 @@ project-root/
 
 - **Inicio:** Visita `http://localhost:8008/` para ver la página principal.
 - **Rutas Disponibles:**
-  - `/catalogo`: Muestra el catálogo de productos.
+  - ``: Muestra el catálogo de productos.
   - `/formulario`: Formulario de contacto.
   - `/quienesomos`: Información sobre la organización.
   - `/desc_product`: Detalles de productos.

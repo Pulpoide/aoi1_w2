@@ -89,15 +89,19 @@ module.exports = {
             camino = 'public/index.html';
             break;
           case '/catalogo':
+          case '/catalogo.html':
             camino = 'public/catalogo.html';
             break;
           case '/formulario':
+          case '/formulario.html':
             camino = 'public/formulario.html';
             break;
           case '/quienesomos':
+          case '/quienesomos.html':
             camino = 'public/quienesomos.html';
             break;
           case '/desc_product':
+          case '/desc_product.html':
             camino = 'public/desc_product.html';
             break;
           default:
