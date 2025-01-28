@@ -23,7 +23,6 @@ body::after {
 .bienvenida {
     position: relative;
     z-index: 2;
-    margin-top: 100px !important;
 }
 
 .centerDiv {
@@ -45,20 +44,15 @@ body::after {
 form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 14px;
     width: 100%;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.2rem;
     color: #fff;
-    text-shadow: -1px 1px 0 #000,
-        1px 1px 0 #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
 }
 
 input,
